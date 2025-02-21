@@ -19,4 +19,4 @@ A full-stack Gym Management System that helps gym owners and trainers manage mem
 ## 🎯 Setup & Installation  
 1️⃣ Clone the repo:  
 ```bash
-git clone https://github.com/yourusername/gym-management-system.git
+git clone https://github.com/yourusername/Gym-Management.git
