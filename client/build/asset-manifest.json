@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.adc62794.css",
+    "main.js": "/static/js/main.209248ec.js",
+    "static/media/legs.jpg": "/static/media/legs.803170b2dc00a1d5af1a.jpg",
+    "static/media/chest.jpg": "/static/media/chest.54bde8f196ddaba5c03a.jpg",
+    "static/media/back.jpg": "/static/media/back.2bd010f523a6dab4311f.jpg",
+    "static/media/gym1.jpg": "/static/media/gym1.692106580f59b3fdce65.jpg",
+    "static/media/shoulders.jpg": "/static/media/shoulders.d1ec5784afc05879cbfd.jpg",
+    "static/media/gym3.jpg": "/static/media/gym3.123bbfb1fad0f8fc3814.jpg",
+    "static/media/gym2.jpg": "/static/media/gym2.510f3e61378c95fb5809.jpg",
+    "static/media/login.jpg": "/static/media/login.ce6460c17c5072eda947.jpg",
+    "static/media/arms.jpg": "/static/media/arms.019692717d008b320012.jpg",
+    "index.html": "/index.html",
+    "main.adc62794.css.map": "/static/css/main.adc62794.css.map",
+    "main.209248ec.js.map": "/static/js/main.209248ec.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.adc62794.css",
+    "static/js/main.209248ec.js"
+  ]
+}
