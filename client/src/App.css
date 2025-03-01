@@ -1,0 +1,26 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Full Page Container */
+body {
+  background-color: #f4f4f4; /* Light gray background */
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure navbar doesn't overlap content */
+.app-container {
+  padding-top: 70px; /* Adjust to navbar height */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-container {
+      padding-top: 60px; /* Adjust for smaller navbar */
+  }
+}
