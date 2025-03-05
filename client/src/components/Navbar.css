@@ -1,31 +1,57 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 /* Navbar Container */
 .navbar {
     background: linear-gradient(to right, #29292a, #121212);
     color: white;
-    padding: 10px 20px; /* Reduce padding */
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100vw; /* Ensure full width */
-    min-height: 60px; /* Prevent excess height */
+    width: 100%;
+    height: 60px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+    animation: fadeInDown 0.5s ease-in-out;
 }
 
-/* Title styling */
+/* Fade-in animation */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title Styling */
 .navbar-title {
     font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0; /* Remove extra margin */
+    font-weight: 600;
+    margin: 0;
+    color: white; /* Same color as other links */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for title */
+.navbar-title:hover {
+    color: #ffdb58;
+    transform: scale(1.05);
 }
 
 /* Navbar Links */
 .navbar-links {
     display: flex;
-    gap: 30px; /* Increase gap for better spacing */
+    gap: 30px;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Individual Link */
@@ -34,7 +60,7 @@
     color: white;
     font-size: 1rem;
     font-weight: 500;
-    padding: 8px 12px; /* Add padding for better clickability */
+    padding: 8px 12px;
     transition: color 0.3s ease, transform 0.2s ease;
 }
 
@@ -44,26 +70,57 @@
     transform: scale(1.05);
 }
 
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* Fix for Overlapping Issue */
+body {
+    padding-top: 80px; /* Adjusted to make space for the fixed navbar */
+}
+
 /* Responsive Navbar */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
+        align-items: flex-start;
         padding: 15px;
+        height: auto;
     }
 
     .navbar-links {
         flex-direction: column;
-        text-align: center;
-        display: none; /* Hide by default */
+        width: 100%;
+        text-align: left;
+        display: none;
+        background: #121212;
+        padding: 10px 0;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
     }
 
     .navbar-links.open {
-        display: flex; /* Show when menu opens */
+        display: flex;
+    }
+
+    .nav-link {
+        display: block;
+        padding: 12px 20px;
+        width: 100%;
     }
 
     .menu-icon {
         display: block;
-        font-size: 1.8rem;
-        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
     }
 }

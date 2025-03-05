@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
-// Ensure correct image paths
+// Importing images
 import chestImg from "../assets/chest.jpg";
 import backImg from "../assets/back.jpg";
 import legsImg from "../assets/legs.jpg";
@@ -16,11 +16,11 @@ const Dashboard = () => {
     const navigate = useNavigate();
 
     const tips = [
-        "Stay hydrated before, during, and after workouts.",
-        "Proper form is more important than heavy weights.",
-        "Always warm up and cool down to prevent injuries.",
-        "Get enough sleep for muscle recovery.",
-        "Eat a balanced diet rich in protein and carbs.",
+        "💧 Stay hydrated before, during, and after workouts.",
+        "🏋️‍♂️ Proper form is more important than lifting heavy weights.",
+        "🔥 Always warm up and cool down to prevent injuries.",
+        "🛌 Get enough sleep for better muscle recovery.",
+        "🥗 Eat a balanced diet rich in protein and healthy carbs.",
     ];
 
     const exercises = [
@@ -34,20 +34,23 @@ const Dashboard = () => {
     return (
         <div className="dashboard">
             {/* Welcome Section */}
-            <h1 className="dashboard-title">🏋️ Welcome to Your Gym Dashboard</h1>
+            <section className="welcome-section">
+                <h1>🏋️ Welcome to Your Gym Dashboard</h1>
+                <p>Your ultimate fitness companion for workouts, nutrition, and tracking progress.</p>
+            </section>
 
             {/* Gym Tips Section */}
-            <div className="tips-section">
+            <section className="tips-section">
                 <h2>🔥 Gym Tips</h2>
                 <ul>
                     {tips.map((tip, index) => (
-                        <li key={index}>✔ {tip}</li>
+                        <li key={index}>{tip}</li>
                     ))}
                 </ul>
-            </div>
+            </section>
 
             {/* Exercises Section */}
-            <div className="exercises-section">
+            <section className="exercises-section">
                 <h2>💪 Exercises by Body Part</h2>
                 <div className="exercise-grid">
                     {exercises.map((exercise, index) => (
@@ -62,17 +65,24 @@ const Dashboard = () => {
                         </div>
                     ))}
                 </div>
-            </div>
+            </section>
 
             {/* Gallery Section */}
-            <div className="gallery-section">
+            <section className="gallery-section">
                 <h2>📸 Gym Gallery</h2>
                 <div className="gallery-grid">
                     <img src={gym1} alt="Gym 1" />
                     <img src={gym2} alt="Gym 2" />
                     <img src={gym3} alt="Gym 3" />
                 </div>
-            </div>
+            </section>
+
+            {/* Call to Action */}
+            <section className="cta-section">
+                <h2>🚀 Start Your Fitness Journey Today!</h2>
+                <p>Join now and transform your body with expert guidance and tracking tools.</p>
+                <button className="cta-button" onClick={() => navigate("/signup")}>Sign Up Now</button>
+            </section>
         </div>
     );
 };

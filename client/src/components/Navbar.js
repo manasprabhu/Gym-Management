@@ -7,19 +7,29 @@ function Navbar() {
 
   return (
     <nav className="navbar">
+      {/* Navbar Title */}
       <h2 className="navbar-title">Gym Management</h2>
 
+      {/* Navigation Links */}
       <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
-        <Link to="/" className="nav-link">Login</Link>
-        <Link to="/signup" className="nav-link">Signup</Link>
-        <Link to="/dashboard" className="nav-link">Dashboard</Link>
-        <Link to="/assignworkouts" className="nav-link">Workout Plans</Link>
+        <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>
+          Login
+        </Link>
+        <Link to="/signup" className="nav-link" onClick={() => setMenuOpen(false)}>
+          Signup
+        </Link>
+        <Link to="/dashboard" className="nav-link" onClick={() => setMenuOpen(false)}>
+          Dashboard
+        </Link>
+        <Link to="/workoutplan" className="nav-link" onClick={() => setMenuOpen(false)}>
+          Workout Plans
+        </Link>
       </div>
 
-      {/* Mobile Menu Button */}
-      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+      {/* Mobile Menu Icon */}
+      <button className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
         ☰
-      </div>
+      </button>
     </nav>
   );
 }

@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import Dashboard from "./pages/Dashboard";
-import AssignWorkouts from "./pages/AssignWorkouts";
+import WorkoutPlan from "./pages/WorkoutPlan";
 import "./App.css"; // Import global styles
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
             <Route path="/" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/assignworkouts" element={<AssignWorkouts />} />
+            <Route path="/workoutplan" element={<WorkoutPlan />} />
           </Routes>
         </div>
       </Router>
